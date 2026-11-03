@@ -117,7 +117,13 @@ def windows_security_descriptor(path):
     buffer = ctypes.create_string_buffer(needed.value)
     if not api(name, 7, buffer, needed.value, ctypes.byref(needed)):
         raise ctypes.WinError(ctypes.get_last_error())
-    return buffer.raw[: needed.value]
+    raw = bytearray(buffer.raw[: needed.value])
+    if len(raw) > 4:
+        import struct
+        val = struct.unpack_from('<H', raw, 2)[0]
+        # Mask transient SE_DACL_AUTO_INHERITED (0x0400)
+        struct.pack_into('<H', raw, 2, val & ~0x0400)
+    return bytes(raw)
 
 
 def security_digest(path):

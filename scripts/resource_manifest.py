@@ -32,7 +32,7 @@ IGNORED_DIRECTORIES = frozenset(
     {
         "__pycache__", ".ruff_cache", ".pytest_cache", ".jules", ".venv",
         ".venv_test", "node_modules", "_runtime", "garmin-output", "output",
-        "outputs", "scratch", "tmp", "temp", "dist", "build",
+        "outputs", "scratch", "tmp", "temp", "dist", "build", "tasks",
     }
 )
 IGNORED_FILE_NAMES = frozenset({"garmin_tokens.json"})

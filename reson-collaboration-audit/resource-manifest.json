@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "skill": "reson-collaboration-audit",
-  "generated_at": "2026-10-25T08:44:28+08:00",
+  "generated_at": "2026-11-03T14:49:23+08:00",
   "hash_algorithm": "SHA-256",
   "text_hash_normalization": "LF",
   "skill_md": "SKILL.md",
@@ -84,7 +84,7 @@
     },
     {
       "path": "resources/.gitkeep",
-      "sha256": "e0b9e19b2208bb5d83ec8e46da2c0b2f75f963136fefc38ead9cf8a4d7e40932"
+      "sha256": "56f0d6ac8fbc29ea59e8eb8ce626949efcce2b16cd4ac9242e5630a6f35afdc3"
     },
     {
       "path": "scripts/assets/template.html",

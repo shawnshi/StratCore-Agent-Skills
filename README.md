@@ -1,6 +1,18 @@
 # Skills
 
+认知棱镜  StratCore-Agent-Skills
 工具是人类意志的延伸。
+
+面向战略顾问与垂直行业的专家级 Agent 技能库：涵盖医疗信息化、战略情报分析、认知解构与高阶交付物工程。
+Production-grade Agent Skills for strategic advisors: Domain expertise in Healthcare IT, OSINT, cognitive modeling, and executive-level delivery.
+
+这是一套专为高阶战略顾问、行业分析师与知识工程师构建的专家级 Agent 技能库（Skills for LLM/Agents）。
+
+不同于常规泛化或玩具级的 Prompt 模板，本项目将严苛的咨询方法论、垂直行业认知壁垒与工业级交付标准工程化封装：
+- **行业深度纵深**：穿透医疗信息化（HIS/EMR/集成平台解耦）、临床 AI 决策支持、企业商业模式与价值链解构；
+- **硬核认知推理**：融合开源战略情报（OSINT）、系统动力学、第一性原理、战略北极星对账与严密假设证伪（Kill Criteria）；
+- **生理与资本底盘**：覆盖长周期认知算力底盘（睡眠/HRV/心肺耐力 VO₂max/力量负荷）管理与跨周期多元资产抗脆弱审计；
+- **生产级交付物**：直接驱动交互式网页报告（Web-Slide）、出版级排版、刊物级视觉与高信噪比文本输出。
 
 当前库存为 51 个用户技能，覆盖学术与认知研究、医疗数字化、视觉与系统流程、个人工作流及文档工具。本目录是 Pi 的本地安装库，不是独立 Git 工作树。
 
@@ -145,12 +157,12 @@ description: 说明技能做什么，以及用户在什么场景下应使用它�
 
 | Skill | 功能说明 |
 |---|---|
-| [`personal-cognitive-auditor`](personal-cognitive-auditor/SKILL.md) | 基于授权日志、日历与 Garmin 数据进行日、周、月、季、年事实复盘；受控补齐当前周期健康数据，精确个人周、月、季度请求过门后保存 canonical 日志 |
+| [`personal-cognitive-auditor`](personal-cognitive-auditor/SKILL.md) | 基于授权日志、日历与 Garmin 数据进行日、周、月、季、年事实复盘；核验整块深度工作时间与碎片损耗，执行战略北极星时间账本对账并输出季度止损清单（Kill List），精确个人周、月、季度请求过门后保存 canonical 日志 |
 | [`personal-cognitive-prescription`](personal-cognitive-prescription/SKILL.md) | 从用户提供的近期问题、决策或复盘材料中识别认知盲区，并给出可核验到具体章节的跨领域阅读处方 |
 | [`personal-diary-writer`](personal-diary-writer/SKILL.md) | 生成并保存个人日记或周期审计；完整日记通过内容门后保存到 canonical 季度日志，周期审计走受保护请求门。历史Reson操作日志仅按授权日期只读，专用写入已退役；纯当次草稿不读取私人数据、不保存 |
-| [`personal-health-analysis`](personal-health-analysis/SKILL.md) | 本地优先分析 Garmin 睡眠、HRV、心率、压力和健康趋势，生成非诊断报告或零外联面板；登录、同步及轨迹下载需独立授权 |
+| [`personal-health-analysis`](personal-health-analysis/SKILL.md) | 本地优先分析恢复支撑（睡眠结构/HRV）与长期底盘（心肺耐力 VO₂max/力量训练负荷），生成非诊断报告或零外联面板；登录、同步及轨迹下载需独立授权 |
 | [`personal-intelligence-hub`](personal-intelligence-hub/SKILL.md) | 生成基线优先、跨技术与医疗数字化且带历史去重的日资讯简报；正式简报自动保存，生产预览仍产生运行中间态 |
-| [`personal-investment-advisor`](personal-investment-advisor/SKILL.md) | 开展证券财报与估值研究、授权持仓及未购观察清单审计、Daily Sync、主动研究与判断复盘；默认免费公开来源，支持 `research_only` / `advisory` / `actionable` 产出标注，不下单或执行订单 |
+| [`personal-investment-advisor`](personal-investment-advisor/SKILL.md) | 开展证券财报与估值研究、跨周期多元资产配置与流动性跑道审计、主业与投资双重集中度（Double-Exposure）穿透审计、Daily Sync、主动研究与判断复盘；默认免费公开来源，支持 `research_only` / `advisory` / `actionable` 产出标注，不下单或执行订单 |
 | [`personal-musicbee-dj`](personal-musicbee-dj/SKILL.md) | 管理本地 MusicBee 歌单与播放；明确标签补全请求使用专用 JSON 研究角色串行研究并受控回写五字段，支持只生成不播放及只读预览，不改播放统计或应用设置 |
 | [`personal-travel-research`](personal-travel-research/SKILL.md) | 为城市或地区制作历史、考古、古建筑、博物馆与重点文物的出发前研究资料，并核验当前开放信息 |
 | [`personal-write-humanizer`](personal-write-humanizer/SKILL.md) | 在不改变事实、业务含义与立场的前提下自然化改写已有中文稿；不伪装身份、规避检测或篡改证据，领域核验交医疗写作入口 |

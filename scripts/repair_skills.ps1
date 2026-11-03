@@ -95,8 +95,13 @@ function Invoke-PythonJsonValidator {
         [string[]]$Arguments
     )
 
-    $python = Get-Command python -ErrorAction SilentlyContinue
-    if ($null -eq $python -or -not (Test-Path -LiteralPath $ScriptPath)) {
+    $pythonExe = if ($env:PAI_PYTHON -and (Test-Path $env:PAI_PYTHON)) {
+        $env:PAI_PYTHON
+    } else {
+        $cmd = Get-Command python -ErrorAction SilentlyContinue
+        if ($cmd) { $cmd.Source } else { $null }
+    }
+    if ($null -eq $pythonExe -or -not (Test-Path -LiteralPath $ScriptPath)) {
         return [PSCustomObject]@{
             Parsed = $false
             ExitCode = 1
@@ -105,7 +110,7 @@ function Invoke-PythonJsonValidator {
         }
     }
 
-    $output = @(& $python.Source '-B' '-X' 'utf8' $ScriptPath @Arguments 2>&1)
+    $output = @(& $pythonExe '-B' '-X' 'utf8' $ScriptPath @Arguments 2>&1)
     $exitCode = $LASTEXITCODE
     try {
         $payload = ($output -join "`n") | ConvertFrom-Json

@@ -33,16 +33,29 @@ done
 root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 cd "$root"
 
-if ! command -v python >/dev/null 2>&1; then
-    echo "gate: python 3 with PyYAML is required." >&2
-    exit 127
-fi
+find_python_with_yaml() {
+    for candidate in "${PAI_PYTHON:-}" python python3 \
+        /c/Users/*/AppData/Local/Programs/Python/Python314/python.exe \
+        /c/Users/*/AppData/Local/Programs/Python/Python3*/python.exe; do
+        [ -n "$candidate" ] || continue
+        if command -v "$candidate" >/dev/null 2>&1 || [ -x "$candidate" ]; then
+            if "$candidate" -B -X utf8 -c 'import sys; assert sys.version_info >= (3, 10); import yaml' >/dev/null 2>&1; then
+                printf '%s\n' "$candidate"
+                return 0
+            fi
+        fi
+    done
+    return 1
+}
 
-if ! python -B -X utf8 -c 'import sys; assert sys.version_info >= (3, 10); import yaml'; then
+python_bin=$(find_python_with_yaml || true)
+if [ -z "$python_bin" ]; then
     echo "gate: Python 3.10+ with PyYAML is required; no dependency was installed." >&2
     exit 127
 fi
-if [ "$tests" -eq 1 ] && ! python -B -X utf8 -c 'import pytest'; then
+export PAI_PYTHON="$python_bin"
+
+if [ "$tests" -eq 1 ] && ! "$python_bin" -B -X utf8 -c 'import pytest' >/dev/null 2>&1; then
     echo "gate: --tests requires pytest; deterministic checks do not." >&2
     exit 127
 fi
@@ -62,7 +75,7 @@ esac
 run_scope() {
     for skill in "$@"; do
         echo "== $skill =="
-        python -B -X utf8 scripts/validate_openai_yaml.py --root . --json --include-skill "$skill"
+        "$python_bin" -B -X utf8 scripts/validate_openai_yaml.py --root . --json --include-skill "$skill"
         if [ "$refresh" -eq 1 ]; then
             # shellcheck disable=SC2086
             pwsh $pwsh_flags -File scripts/generate_resource_manifests.ps1 -Root . -IncludeSkills "$skill"
@@ -76,7 +89,7 @@ run_scope() {
 
 run_repository() {
     echo "== openai.yaml metadata =="
-    python -B -X utf8 scripts/validate_openai_yaml.py --root . --json
+    "$python_bin" -B -X utf8 scripts/validate_openai_yaml.py --root . --json
     if [ "$refresh" -eq 1 ]; then
         # shellcheck disable=SC2086
         pwsh $pwsh_flags -File scripts/generate_resource_manifests.ps1 -Root .
@@ -91,7 +104,7 @@ run_repository() {
 
 if [ "$tests" -eq 1 ]; then
     echo "== authorized library tests (temporary writes) =="
-    python -B -X utf8 -m pytest scripts -q -p no:cacheprovider
+    "$python_bin" -B -X utf8 -m pytest scripts -q -p no:cacheprovider
 fi
 
 if [ "$#" -gt 0 ]; then

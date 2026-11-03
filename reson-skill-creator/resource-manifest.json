@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "skill": "reson-skill-creator",
-  "generated_at": "2026-10-18T21:02:30+08:00",
+  "generated_at": "2026-11-03T14:50:36+08:00",
   "hash_algorithm": "SHA-256",
   "text_hash_normalization": "LF",
   "skill_md": "SKILL.md",
@@ -66,25 +66,25 @@
       "path": "scripts/gate.sh",
       "exists": true,
       "resolved_path": "scripts/gate.sh",
-      "sha256": "643b5a891c00eb593bbe8c33df259fee39f9e9507c4bdb37260cd6ceb8569d4e"
+      "sha256": "cf90c2ce850fb2160f0654e948c89d5249708cfb549f73e12cd8406b230dcd43"
     },
     {
       "path": "scripts/generate_resource_manifests.ps1",
       "exists": true,
       "resolved_path": "scripts/generate_resource_manifests.ps1",
-      "sha256": "00088ec72770f204f155db1828d075d1b28e2b58664c706f02da928f3215407c"
+      "sha256": "9b9e6ca3e47c90063ef1920457cb006e4cda25b0a4c583f7a643dbd34871db66"
     },
     {
       "path": "scripts/repair_skills.ps1",
       "exists": true,
       "resolved_path": "scripts/repair_skills.ps1",
-      "sha256": "d1d6ccd6371fe8daf0ad161566e8110f3da85dea565f4f9474667c9ae67239ec"
+      "sha256": "ede963888e3475481159b808d4c23080581f9825d60131ed39f37e62334aa00d"
     },
     {
       "path": "scripts/resource_manifest.py",
       "exists": true,
       "resolved_path": "scripts/resource_manifest.py",
-      "sha256": "f2148098b010b672e7747baad5b49226b31dad6a4cae2f508b946ca0499d79cc"
+      "sha256": "41872e65b28133ecb67c29960a33d770f00e1829307cf57c205941340ca2b2e4"
     },
     {
       "path": "scripts/test_gate.py",

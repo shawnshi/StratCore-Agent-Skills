@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "skill": "personal-musicbee-dj",
-  "generated_at": "2026-10-25T08:44:28+08:00",
+  "generated_at": "2026-11-03T14:49:23+08:00",
   "hash_algorithm": "SHA-256",
   "text_hash_normalization": "LF",
   "skill_md": "SKILL.md",
@@ -117,7 +117,7 @@
     },
     {
       "path": "src/core/tag_writer.py",
-      "sha256": "6f717df1b952ccda4fc3a07514ad48b1153af9018d8949bb414df4d9818645e4"
+      "sha256": "4038a70ab950c84fb7a66d269af7ba31f0c46e2e8ab56b8c7f104ae8f19670f3"
     },
     {
       "path": "src/pilot.py",
@@ -125,7 +125,7 @@
     },
     {
       "path": "src/research_wave.js",
-      "sha256": "4d4534228847abc59268b4d94fa908d557b99e009e35d68d5b9156f3e1d27260"
+      "sha256": "2c88e41ce8d72c9c858bcbed1b7a6e4193a33df6f75f3962c45bd65e4d1ef8a9"
     },
     {
       "path": "src/tag_completion.py",

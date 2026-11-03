@@ -27,9 +27,13 @@ $worker = Join-Path $PSScriptRoot 'resource_manifest.py'
 $reader = [System.IO.File]::OpenRead($worker)
 try { $null = $reader.ReadByte() } finally { $reader.Dispose() }
 
-$python = Get-Command python -CommandType Application -ErrorAction SilentlyContinue |
-    Select-Object -First 1
-if ($null -eq $python) {
+$pythonExe = if ($env:PAI_PYTHON -and (Test-Path $env:PAI_PYTHON)) {
+    $env:PAI_PYTHON
+} else {
+    $cmd = Get-Command python -CommandType Application -ErrorAction SilentlyContinue | Select-Object -First 1
+    if ($cmd) { $cmd.Source } else { $null }
+}
+if ($null -eq $pythonExe) {
     throw 'Python application is required to generate or validate resource manifests.'
 }
 
@@ -60,7 +64,7 @@ foreach ($skill in @($ExcludeSkills)) {
 # Redirect both pipes independently; native stderr must not become a PS exception.
 foreach ($phase in @('probe', 'main')) {
     $start = [System.Diagnostics.ProcessStartInfo]::new()
-    $start.FileName = $python.Source
+    $start.FileName = $pythonExe
     $start.WorkingDirectory = $Root
     $start.UseShellExecute = $false
     $start.RedirectStandardOutput = $true

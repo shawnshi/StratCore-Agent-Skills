@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "skill": "personal-cognitive-auditor",
-  "generated_at": "2026-10-18T21:02:29+08:00",
+  "generated_at": "2026-11-03T14:49:22+08:00",
   "hash_algorithm": "SHA-256",
   "text_hash_normalization": "LF",
   "skill_md": "SKILL.md",
@@ -41,7 +41,7 @@
     },
     {
       "path": "prompts/DAILY.md",
-      "sha256": "cc288c48db04d9fb6383be02b1f151f148cc7ba0df9704b3e3e6acbe3dc70a87"
+      "sha256": "b54cefced189319b3eb0e067fa7161895884062bbd1e57f9e6f264e0cc53ebc0"
     },
     {
       "path": "prompts/MONTHLY.md",
@@ -49,11 +49,11 @@
     },
     {
       "path": "prompts/QUARTERLY.md",
-      "sha256": "e034c0ba375226a2298e0e63532fd4de1900057c76cbe3194810071d6d9e04cb"
+      "sha256": "e0a49b32f3d6beb630f32cdc830dce4cff11169553881e8f0071dab3e30f4548"
     },
     {
       "path": "prompts/WEEKLY.md",
-      "sha256": "c1255585437318bbf9db39e29d5bb8f3f3e9da707cc3b89d7a53792bafcdeea1"
+      "sha256": "24624fd1fc12d78cd4a890f456b1094cb59b845319da3e6fb7c3c2b21f5aa18c"
     },
     {
       "path": "references/config.md",
@@ -69,7 +69,7 @@
     },
     {
       "path": "references/periodic_save.md",
-      "sha256": "3318be457aa2fcb990137e17a3a3cbe0cc357a831f5fc2c55d08b5511e89843c"
+      "sha256": "c20fc4abfe37d2a8d6a4bbba4cae3bfa479fe47c0842c874b8dcc79e32a25db8"
     },
     {
       "path": "references/semantic_layer.md",
@@ -119,7 +119,7 @@
       "path": "prompts/DAILY.md",
       "exists": true,
       "resolved_path": "personal-cognitive-auditor/prompts/DAILY.md",
-      "sha256": "cc288c48db04d9fb6383be02b1f151f148cc7ba0df9704b3e3e6acbe3dc70a87"
+      "sha256": "b54cefced189319b3eb0e067fa7161895884062bbd1e57f9e6f264e0cc53ebc0"
     },
     {
       "path": "prompts/MONTHLY.md",
@@ -131,13 +131,13 @@
       "path": "prompts/QUARTERLY.md",
       "exists": true,
       "resolved_path": "personal-cognitive-auditor/prompts/QUARTERLY.md",
-      "sha256": "e034c0ba375226a2298e0e63532fd4de1900057c76cbe3194810071d6d9e04cb"
+      "sha256": "e0a49b32f3d6beb630f32cdc830dce4cff11169553881e8f0071dab3e30f4548"
     },
     {
       "path": "prompts/WEEKLY.md",
       "exists": true,
       "resolved_path": "personal-cognitive-auditor/prompts/WEEKLY.md",
-      "sha256": "c1255585437318bbf9db39e29d5bb8f3f3e9da707cc3b89d7a53792bafcdeea1"
+      "sha256": "24624fd1fc12d78cd4a890f456b1094cb59b845319da3e6fb7c3c2b21f5aa18c"
     },
     {
       "path": "references/energy_management.md",
@@ -155,7 +155,7 @@
       "path": "references/periodic_save.md",
       "exists": true,
       "resolved_path": "personal-cognitive-auditor/references/periodic_save.md",
-      "sha256": "3318be457aa2fcb990137e17a3a3cbe0cc357a831f5fc2c55d08b5511e89843c"
+      "sha256": "c20fc4abfe37d2a8d6a4bbba4cae3bfa479fe47c0842c874b8dcc79e32a25db8"
     },
     {
       "path": "references/semantic_layer.md",

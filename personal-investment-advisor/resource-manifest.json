@@ -1,18 +1,18 @@
 {
   "schema_version": 3,
   "skill": "personal-investment-advisor",
-  "generated_at": "2026-10-25T08:44:28+08:00",
+  "generated_at": "2026-11-03T14:49:23+08:00",
   "hash_algorithm": "SHA-256",
   "text_hash_normalization": "LF",
   "skill_md": "SKILL.md",
-  "skill_md_sha256": "cd0feaaaa9c51389206ca5a44a92fa7df332b8fe7d7a72a312980a3f427ebf7b",
+  "skill_md_sha256": "421e7abb7944ca4badd396bbbdda2bb6143a47d1e373737ff50e2feb80b7fa5a",
   "top_level_files": [
     "SKILL.md"
   ],
   "top_level_file_hashes": [
     {
       "path": "SKILL.md",
-      "sha256": "cd0feaaaa9c51389206ca5a44a92fa7df332b8fe7d7a72a312980a3f427ebf7b"
+      "sha256": "421e7abb7944ca4badd396bbbdda2bb6143a47d1e373737ff50e2feb80b7fa5a"
     }
   ],
   "top_level_directories": [
@@ -42,11 +42,11 @@
   "resource_file_hashes": [
     {
       "path": "agents/openai.yaml",
-      "sha256": "f404cbb72a3fdef538f1ba7d638979e6b7d2d72305baf4c01d99cd72f48c8dc4"
+      "sha256": "e91ef876b48d47262214af8fbea1f2435ad21d020e29c5c4adbc72d5c66325c5"
     },
     {
       "path": "references/active-research.md",
-      "sha256": "ecee198ac36b2775a88659e298773f33cab4038c80614ea2ada7ed23d822e9e6"
+      "sha256": "166ba9e0b5f70229fd61c7066dfc72cf6ccfe5ae97fdd6481b5df9cd59759381"
     },
     {
       "path": "references/active_construction_policy_schema.json",
@@ -74,7 +74,7 @@
     },
     {
       "path": "references/cn-actionability.md",
-      "sha256": "f96ddd9d469d62d6312a0013e52101a4fde92bcb576c21fd8917a9e821f0a1cc"
+      "sha256": "d5d999b8442fa3b5ac1d8bacf7da98b0a4cfb3c745b75d7fd0b2b3469cd8bde2"
     },
     {
       "path": "references/cn-equity-evidence.md",
@@ -102,7 +102,7 @@
     },
     {
       "path": "references/daily-sync.md",
-      "sha256": "6da7e82000e8004a77eb5b5d9920034b1bf17a94da92011df4462039f7fc2319"
+      "sha256": "01ab605b3578c559d0e379e57598a1268f2e9da881ee065c832b71a947a08428"
     },
     {
       "path": "references/dashboard_schema.json",
@@ -114,7 +114,7 @@
     },
     {
       "path": "references/free-data-policy.md",
-      "sha256": "46ef50ffc0c772bf24f10623b28d85f660672cdac43d0ee41bbcf3dd769c020f"
+      "sha256": "0a1c6f9752036a98648189bf801058c183f07aca36e06a71c0528aafab0dbbc7"
     },
     {
       "path": "references/interpretive_labels.json",
@@ -170,7 +170,7 @@
     },
     {
       "path": "references/portfolio-audit.md",
-      "sha256": "07e6777ac40b02a84309dbba86161259343af6949d014d01fd210d9b6631859f"
+      "sha256": "0ed0bf66d30f12bf15feafc0d649c2e397f334ab12f40a580abb7189fb69fe22"
     },
     {
       "path": "references/portfolio_positions.example.json",
@@ -882,7 +882,7 @@
       "path": "references/active-research.md",
       "exists": true,
       "resolved_path": "personal-investment-advisor/references/active-research.md",
-      "sha256": "ecee198ac36b2775a88659e298773f33cab4038c80614ea2ada7ed23d822e9e6"
+      "sha256": "166ba9e0b5f70229fd61c7066dfc72cf6ccfe5ae97fdd6481b5df9cd59759381"
     },
     {
       "path": "references/calibration.md",
@@ -906,7 +906,7 @@
       "path": "references/daily-sync.md",
       "exists": true,
       "resolved_path": "personal-investment-advisor/references/daily-sync.md",
-      "sha256": "6da7e82000e8004a77eb5b5d9920034b1bf17a94da92011df4462039f7fc2319"
+      "sha256": "01ab605b3578c559d0e379e57598a1268f2e9da881ee065c832b71a947a08428"
     },
     {
       "path": "references/market_holidays_sse_szse_2026.json",
@@ -924,7 +924,7 @@
       "path": "references/portfolio-audit.md",
       "exists": true,
       "resolved_path": "personal-investment-advisor/references/portfolio-audit.md",
-      "sha256": "07e6777ac40b02a84309dbba86161259343af6949d014d01fd210d9b6631859f"
+      "sha256": "0ed0bf66d30f12bf15feafc0d649c2e397f334ab12f40a580abb7189fb69fe22"
     },
     {
       "path": "scripts/pia.py",

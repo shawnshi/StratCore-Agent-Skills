@@ -21,3 +21,5 @@ _runtime/
 .venv/
 node_modules/
 .venv_test
+tasks/
+

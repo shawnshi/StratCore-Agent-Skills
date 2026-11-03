@@ -717,6 +717,25 @@ def _period_id_at_event(event: dict[str, Any], label: str) -> str:
     raise DiaryError(f"unsupported periodic request type: {label}")
 
 
+def _explicit_date_in_text(text: str, default_year: int) -> date | None:
+    match = re.search(r'(?:(\d{4})[年\.\-/])?(\d{1,2})[月\.\-/](\d{1,2})日?', text)
+    if match:
+        year = int(match.group(1)) if match.group(1) else default_year
+        month = int(match.group(2))
+        day = int(match.group(3))
+        try:
+            return date(year, month, day)
+        except ValueError:
+            return None
+    iso_match = re.search(r'\b(\d{4})-(\d{2})-(\d{2})\b', text)
+    if iso_match:
+        try:
+            return date(int(iso_match.group(1)), int(iso_match.group(2)), int(iso_match.group(3)))
+        except ValueError:
+            return None
+    return None
+
+
 def _is_personal_diary_autosave_authorized(text: str) -> bool:
     normalized = text.strip()
     for prefix in ("[OVERRIDE]", "[WARROOM]"):
@@ -773,7 +792,10 @@ def _verify_personal_diary_request(
             "personal diary autosave requires an authorized personal diary request; "
             "draft, preview, read-only, or meta/management requests are not writable"
         )
-    if _local_day_at_event(event, "personal diary") != date.fromisoformat(args.date):
+    event_day = _local_day_at_event(event, "personal diary")
+    explicit_day = _explicit_date_in_text(text, event_day.year)
+    effective_day = explicit_day if explicit_day is not None else event_day
+    if effective_day != date.fromisoformat(args.date):
         raise DiaryError("personal diary request date does not match the write date")
     try:
         source = Path(args.content_file).read_bytes()
